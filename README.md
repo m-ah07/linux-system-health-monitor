@@ -25,7 +25,7 @@ This tool is lightweight, easy to use, and saves reports for later analysis.
 ## 🚀 Usage
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/marwan-ahmed-23/linux-system-health-monitor.git
+    git clone https://github.com/m-ah07/linux-system-health-monitor.git
     cd linux-system-health-monitor
     ```
 
