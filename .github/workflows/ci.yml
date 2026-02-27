@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  shellcheck-and-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck ifstat
+
+      - name: Lint script with shellcheck
+        run: shellcheck health-monitor.sh tests/smoke-test.sh
+
+      - name: Run smoke test
+        run: bash tests/smoke-test.sh
